@@ -14,7 +14,7 @@ def lista_escala(request):
             'lista': resultado
         }
     else:
-        resultado = Escala.objects.order_by('nome')
+        resultado = Escala.objects.order_by('data')
         resultado = {
             'lista': resultado
         }
