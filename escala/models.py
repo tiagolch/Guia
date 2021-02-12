@@ -36,13 +36,10 @@ class Escala(models.Model):
     def __str__(self):
         return f'{str(self.nome)} {str(self.funcao)}'
 
-    def get_ministerio(self):
-        return f' {self.ministerio}'
-
-    def get_data(self):
+    def datas(self):
         return self.data.strftime('%d/%m/%Y %H:%M')
 
-    def get_ultima_alteracao(self):
+    def ultima_alteracao(self):
         return self.ultima_alteração.strftime('%d/%m/%Y %H:%M')
 
 

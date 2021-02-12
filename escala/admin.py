@@ -19,7 +19,7 @@ class PessoaAdmin(admin.ModelAdmin):
 
 @admin.register(Escala)
 class EscalaAdmin(admin.ModelAdmin):
-    list_display = ['nome', 'funcao', 'get_data', 'get_ultima_alteracao']
+    list_display = ['nome', 'funcao', 'datas', 'ultima_alteracao']
     list_filter = ['funcao', 'data']
     search_fields = ['nome', 'funcao']
 
