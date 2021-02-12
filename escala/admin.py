@@ -14,7 +14,7 @@ class FuncaoAdmin(admin.ModelAdmin):
 
 @admin.register(Pessoa)
 class PessoaAdmin(admin.ModelAdmin):
-    list_display = ['nome', 'email', 'celular']
+    list_display = ['nome', 'funcao', 'email', 'celular']
 
 
 @admin.register(Escala)

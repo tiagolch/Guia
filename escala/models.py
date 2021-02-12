@@ -19,7 +19,6 @@ class Funcao(models.Model):
 class Pessoa(models.Model):
     nome = models.CharField(max_length=25)
     sobre_nome = models.CharField(max_length=25)
-    ministerio = models.ForeignKey('Ministerio', on_delete=models.DO_NOTHING, blank=True, null=True)
     funcao = models.ForeignKey(Funcao, on_delete=models.CASCADE)
     email = models.EmailField(blank=True, null=True)
     celular = models.CharField(max_length=11)
