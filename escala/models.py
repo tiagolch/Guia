@@ -35,7 +35,7 @@ class Escala(models.Model):
     ultima_alteração = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{str(self.nome)}'
+        return f'{str(self.nome)} {str(self.funcao)}'
 
     def get_ministerio(self):
         return f' {self.ministerio}'
