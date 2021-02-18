@@ -11,13 +11,20 @@
       <th scope="col">Escala</th>
     </tr>
   </thead>
+
+
   <tbody>
+  {%if lista %}
+  {%for lis in lista%}
     <tr>
-      <th scope="row">1</th>
-      <td>Tiago</td>
-      <td>BroadCast Camera</td>
-      <td>14/02/2021 19:00</td>
+      <th scope="row">{{lis.id}}</th>
+      <td>{{lis.nome}}</td>
+      <td>{{lis.funcao}}</td>
+      <td>{{lis.datas}}</td>
     </tr>
+  {%endfor %}
+  {%endif%}
   </tbody>
 </table>
+
 {% endblock %}

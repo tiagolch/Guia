@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 
 def index(request):
@@ -6,5 +7,16 @@ def index(request):
 
 
 def lista_escala(request):
-    return render(request, 'lista_escala.html')
+    busca = request.GET.get('buscar')
+    if busca:
+        resultado = Escala.objects.filter(nome__icontains=busca)
+        resultado = {
+            'lista': resultado
+        }
+    else:
+        resultado = Escala.objects.order_by('nome')
+        resultado = {
+            'lista': resultado
+        }
+    return render(request, 'lista_escala.html', resultado)
 
