@@ -37,7 +37,7 @@ class Escala(models.Model):
         return f'{str(self.nome)} {str(self.funcao)}'
 
     def datas(self):
-        return self.data.strftime('%d/%m/%Y %H:%M')
+        return self.data.strftime('%A %d/%m/%Y %H:%M')
 
     def ultima_alteracao(self):
         return self.ultima_alteração.strftime('%d/%m/%Y %H:%M')
